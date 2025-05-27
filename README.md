@@ -70,6 +70,7 @@ The program should run to completion and you should see the results.
 
 For connectdb:
 
+```
 ❯ ./run.sh
 Connect statement tests
 
@@ -80,22 +81,28 @@ Test 1: CONNECT without id or password.
 Test 1: This will fail.
 Error: cannot connect
 -0000001060
-DSCOBOL  
+DSCOBOL
 Test 2: CONNECT with id and password.
 Test 2: passed as char fields.
 Test 2: OK
 Test 3: CONNECT with id and password.
 Test 3: passed as varchar fields.
 Test 3: OK
+```
 
 For static_check:
 
+```
 ❯ ./run.sh
 Sample COBOL program: STATIC1
 Enter your user id (default none): db2inst1
 Enter your password : <password>
 First name = SYBIL
+```
 
+For cursor_check:
+
+```
 ❯ ./run.sh
 Sample COBOL program: CURSOR
 Enter your user id (default none): db2inst1
@@ -111,3 +118,4 @@ Daniels in Dept. 10 is a Manager
 Jones in Dept. 10 is a Manager
 Lea in Dept. 66 is a Manager
 Quill in Dept. 84 is a Manager
+```
