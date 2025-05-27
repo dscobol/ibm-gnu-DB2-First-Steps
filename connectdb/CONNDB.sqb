@@ -39,7 +39,8 @@
            accept ws-pass
 
       *>   test 1 - basic type 1 CONNECT without id or password
-           display "Test 1:"
+           display "Test 1: CONNECT without id or password."
+           display "Test 1: This will fail."
 
            EXEC SQL
               CONNECT TO :ws-db
@@ -48,7 +49,7 @@
               display "Error: cannot connect "
               display sqlcode
               display sqlerrmc
-              stop run
+      *        stop run
            else
               display "Test 1: OK"
               EXEC SQL
@@ -64,7 +65,8 @@
 
       *>   test2
       *>   type 1 connect with id / password passed as char fields
-           display "Test 2:"
+           display "Test 2: CONNECT with id and password."
+           display "Test 2: passed as char fields."
            EXEC SQL
               CONNECT TO :ws-db USER :ws-usr  USING :ws-pass
            END-EXEC
@@ -88,7 +90,8 @@
 
       *>   test3
       *>   type 1 connect with id / password passed as varchar field
-           display "Test 3:"
+           display "Test 3: CONNECT with id and password."
+           display "Test 3: passed as varchar fields."
            move 0                                   to  ws-var-pass-len
            move ws-pass                             to  ws-var-pass-dat
            inspect ws-pass tallying ws-var-pass-len for characters
